@@ -1,0 +1,22 @@
+---
+
+- name: install required
+  yum: 
+    name: "{{ items }}"
+    state: installed
+    update_cache: true
+  with_items:
+    - wget
+    - nload
+    - tcpdump
+    - zsh 
+    - git 
+    - vim
+    - bind-utils
+    - python-pygments
+
+- name: get install.sh from github
+  get_url:
+    url: https://raw.githubusercontent.com/brusnigin/oh-my-zsh/master/tools/install.sh
+    dest: ~/install.sh
+
