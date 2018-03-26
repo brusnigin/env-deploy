@@ -20,3 +20,10 @@
     url: https://raw.githubusercontent.com/brusnigin/oh-my-zsh/master/tools/install.sh
     dest: ~/install.sh
 
+- name: chmod file for run
+  file:
+    path: ~/install.sh
+    mode: 0777
+
+- script: ~/install.sh
+

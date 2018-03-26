@@ -1,0 +1,5 @@
+---
+
+- hosts: dpl
+  roles:
+    - deploy.oh-my-zsh
